@@ -3,6 +3,7 @@ ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
+gem 'bootstrap-sass', '2.3.2.0'
 
 # Use postgresql as the database for Active Record
 group :development, :test do
@@ -13,6 +14,8 @@ end
 group :test do
 	gem 'selenium-webdriver', '2.35.1'
 	gem 'capybara', '2.1.0'
+	gem 'factory_girl_rails', '4.2.0'
+	gem 'database_cleaner', github: 'bmabey/database_cleaner'
 end
 
 gem 'sass-rails', '4.0.1'
@@ -31,6 +34,7 @@ group :doc do
 end
 
 gem "mini_portile", "~> 0.5.2"
+gem 'delayed_job_active_record'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
