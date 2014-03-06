@@ -5,6 +5,7 @@ class AsController < ApplicationController
   # GET /as.json
   def index
     @as = A.all
+    @bs = B.all
   end
 
   # GET /as/1
