@@ -77,7 +77,7 @@ describe AsController do
 
       it "redirects to the created a" do
         post :create, {:a => valid_attributes}, valid_session
-        response.should redirect_to(A.last)
+        response.should redirect_to(root_url)
       end
     end
 

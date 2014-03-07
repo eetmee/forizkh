@@ -1,55 +1,55 @@
-<h1>Listing as and bs</h1>
+<% provide(:title, "As and Bs") %>
+<h1>Listing As</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>id</th>
-      <th>Name</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<div class="row">
+  <div class="span6 offset3">
+    <p id="notice"><%= notice %></p>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>Name</th>
+          <th></th>
+        </tr>
+      </thead>
 
-  <tbody>
-    <% @as.each do |a| %>
-      <tr>
-        <td><%= a.id %></td>
-        <td><%= a.name %></td>
-        <td><%= link_to 'Show', a %></td>
-        <td><%= link_to 'Edit', edit_a_path(a) %></td>
-        <td><%= link_to 'Destroy', a, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <tbody>
+        <% @as.each do |a| %>
+          <tr>
+            <td><%= a.id %></td>
+            <td><%= a.name %></td>
+            <td><%= link_to 'Destroy', a, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
 
-<br>
+    <br>
 
-<%= link_to 'New A', new_a_path %>
+    <%= link_to 'New A', new_a_path, class: "btn btn-success" %>
 
-<br>
-<br>
+    <br>
+    <h1>Listing Bs</h1>
 
 
-<table>
-  <thead>
-    <tr>
-      <th>id</th>
-      <th>a1_id</th>
-      <th>a2_id</th>
-      <th></th>
-    </tr>
-  </thead>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>a1_id</th>
+          <th>a2_id</th>
+        </tr>
+      </thead>
 
-  <tbody>
-    <% @bs.each do |b| %>
-      <tr>
-        <td><%= b.id %></td>
-        <td><%= b.a1_id %></td>
-        <td><%= b.a2_id %></td>
-        <td></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <tbody>
+        <% @bs.each do |b| %>
+          <tr>
+            <td><%= b.id %></td>
+            <td><%= b.a1_id %></td>
+            <td><%= b.a2_id %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

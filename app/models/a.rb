@@ -9,7 +9,6 @@ class A < ActiveRecord::Base
     end
 
     def destroy_all_bs!
-    	#binding.pry
     	Delayed::Job.enqueue DestroyBs.new(id)
     end
 end

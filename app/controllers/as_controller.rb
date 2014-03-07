@@ -29,8 +29,8 @@ class AsController < ApplicationController
 
     respond_to do |format|
       if @a.save
-        format.html { redirect_to @a, notice: 'A was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @a }
+        format.html { redirect_to root_url, notice: 'A was successfully created.' }
+        format.json { render action: 'show', status: :created, location: @as }
       else
         format.html { render action: 'new' }
         format.json { render json: @a.errors, status: :unprocessable_entity }
